@@ -1,0 +1,18 @@
+<div style="display:none">
+	<canvas id="canvasComputed" width="1000px" height="1000px"></canvas>
+</div>
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		var svg = $('#svg')[0];
+		var canvasComputed = $('#canvasComputed')[0];
+		var ctxConverted = canvasComputed.getContext("2d");
+		canvg('canvasComputed', new XMLSerializer().serializeToString(svg));
+	});
+
+	$("#save").on("click", function(){
+	    Canvas2Image.saveAsPNG(canvasComputed, 1000, 1000);
+	});
+
+</script>

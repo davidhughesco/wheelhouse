@@ -1,0 +1,44 @@
+class AddMoreFieldsToWheels < ActiveRecord::Migration
+  def change
+  	add_column :wheels, :ind_2_title, :string
+  	add_column :wheels, :ind_2_d, :boolean
+  	add_column :wheels, :ind_2_e, :boolean
+  	add_column :wheels, :ind_2_a, :boolean
+  	add_column :wheels, :ind_2_h, :boolean
+  	add_column :wheels, :ind_3_title, :string
+  	add_column :wheels, :ind_3_d, :boolean
+  	add_column :wheels, :ind_3_e, :boolean
+  	add_column :wheels, :ind_3_a, :boolean
+  	add_column :wheels, :ind_3_h, :boolean
+  	add_column :wheels, :ind_4_title, :string
+  	add_column :wheels, :ind_4_d, :boolean
+  	add_column :wheels, :ind_4_e, :boolean
+  	add_column :wheels, :ind_4_a, :boolean
+  	add_column :wheels, :ind_4_h, :boolean
+  	add_column :wheels, :ind_5_title, :string
+  	add_column :wheels, :ind_5_d, :boolean
+  	add_column :wheels, :ind_5_e, :boolean
+  	add_column :wheels, :ind_5_a, :boolean
+  	add_column :wheels, :ind_5_h, :boolean
+  	add_column :wheels, :ind_6_title, :string
+  	add_column :wheels, :ind_6_d, :boolean
+  	add_column :wheels, :ind_6_e, :boolean
+  	add_column :wheels, :ind_6_a, :boolean
+  	add_column :wheels, :ind_6_h, :boolean
+  	add_column :wheels, :ind_7_title, :string
+  	add_column :wheels, :ind_7_d, :boolean
+  	add_column :wheels, :ind_7_e, :boolean
+  	add_column :wheels, :ind_7_a, :boolean
+  	add_column :wheels, :ind_7_h, :boolean
+  	add_column :wheels, :ind_8_title, :string
+  	add_column :wheels, :ind_8_d, :boolean
+  	add_column :wheels, :ind_8_e, :boolean
+  	add_column :wheels, :ind_8_a, :boolean
+  	add_column :wheels, :ind_8_h, :boolean
+  	add_column :wheels, :ind_9_title, :string
+  	add_column :wheels, :ind_9_d, :boolean
+  	add_column :wheels, :ind_9_e, :boolean
+  	add_column :wheels, :ind_9_a, :boolean
+  	add_column :wheels, :ind_9_h, :boolean
+  end
+end

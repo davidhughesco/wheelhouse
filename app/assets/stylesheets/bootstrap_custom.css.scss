@@ -1,0 +1,80 @@
+// Import Bootstrap
+
+$font-family-sans-serif: 'Source Sans Pro', sans-serif;
+$font-size-base: 16px;
+$brand-primary: #4BAADC;
+
+@import "bootstrap";
+
+// Customisation
+
+html {
+  position: relative;
+  min-height: 100%;
+  font-weight: 300;
+  text-align: center;
+}
+
+body {
+  height: 100%;
+}
+
+h1, h2 {
+	font-weight: 300;
+	color: $brand-primary;
+}
+
+.step {
+	font-size: 2em;
+	margin-bottom: -0.25em;
+	color: $brand-primary;
+}
+
+.title {
+	font-size: 3em;
+	margin-bottom: 1em;
+}
+
+.para {
+	margin-bottom: 3em;
+}
+
+.wheel-image {
+	overflow-x: hidden;
+	border-bottom: 1px solid lightgray;
+}
+
+.btn-previous {
+	margin-right: 0.25em;
+}
+
+.table th {
+	font-weight: 300;
+}
+
+.middot {
+	font-weight: 700;
+	margin: 0 0.5em;
+}
+
+.svg-container {
+	width: 30%;
+	margin-bottom: 3em;
+}
+
+.push {
+	height: 100px;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	height: 100px;
+	text-align: center;
+	width: 100%;
+	color: darkgray;
+}
+
+.footer a {
+	color: $brand-primary;
+}

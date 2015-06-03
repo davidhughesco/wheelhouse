@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  i1_d: MyString
+  i1_e: MyString
+  i1_a: MyString
+  i1_h: MyString
+
+two:
+  i1_d: MyString
+  i1_e: MyString
+  i1_a: MyString
+  i1_h: MyString

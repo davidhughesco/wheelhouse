@@ -1,0 +1,102 @@
+<%= simple_form_for(@wheel, html: { class: 'form-horizontal' }) do |f| %>
+
+  <% if @wheel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wheel.errors.count, "error") %> prohibited this wheel from being saved:</h2>
+
+      <ul>
+      <% @wheel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="table table-striped table-bordered" style="margin-bottom:3em">
+    <thead>
+      <th style="width:5%"></th>
+      <th style="width:35%">Indicator</th>
+      <th style="width:15%;text-align:center">Developed</th>
+      <th style="width:15%;text-align:center">Established</th>
+      <th style="width:15%;text-align:center">Advanced</th>
+      <th style="width:15%;text-align:center">High Performing</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td align="left">Leading and Inspiring People</td>
+        <td><%= f.check_box :ind_1_d, label: false %></td>
+        <td><%= f.check_box :ind_1_e, label: false %></td>
+        <td><%= f.check_box :ind_1_a, label: false %></td>
+        <td><%= f.check_box :ind_1_h, label: false %></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td align="left">Living the Organisation's Values and Behaviours</td>
+        <td align="center"><%= f.check_box :ind_2_d, label: false %></td>
+        <td align="center"><%= f.check_box :ind_2_e, label: false %></td>
+        <td align="center"><%= f.check_box :ind_2_a, label: false %></td>
+        <td align="center"><%= f.check_box :ind_2_h, label: false %></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td align="left">Empowering and Involving People</td>
+        <td align="center"><%= f.check_box :ind_3_d, label: false %></td>
+        <td align="center"><%= f.check_box :ind_3_e, label: false %></td>
+        <td align="center"><%= f.check_box :ind_3_a, label: false %></td>
+        <td align="center"><%= f.check_box :ind_3_h, label: false %></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td align="left">Managing Performance</td>
+        <td align="center"><%= f.check_box :ind_4_d, label: false %></td>
+        <td align="center"><%= f.check_box :ind_4_e, label: false %></td>
+        <td align="center"><%= f.check_box :ind_4_a, label: false %></td>
+        <td align="center"><%= f.check_box :ind_4_h, label: false %></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td align="left">Recognising and Rewarding Performance</td>
+        <td align="center"><%= f.check_box :ind_5_d, label: false %></td>
+        <td align="center"><%= f.check_box :ind_5_e, label: false %></td>
+        <td align="center"><%= f.check_box :ind_5_a, label: false %></td>
+        <td align="center"><%= f.check_box :ind_5_h, label: false %></td>
+      </tr>
+        <td>6</td>
+        <td align="left">Structuring Work</td>
+        <td align="center"><%= f.check_box :ind_6_d, label: false %></td>
+        <td align="center"><%= f.check_box :ind_6_e, label: false %></td>
+        <td align="center"><%= f.check_box :ind_6_a, label: false %></td>
+        <td align="center"><%= f.check_box :ind_6_h, label: false %></td>
+      </tr>
+      </tr>
+        <td>7</td>
+        <td align="left">Capability Building</td>
+        <td align="center"><%= f.check_box :ind_7_d, label: false %></td>
+        <td align="center"><%= f.check_box :ind_7_e, label: false %></td>
+        <td align="center"><%= f.check_box :ind_7_a, label: false %></td>
+        <td align="center"><%= f.check_box :ind_7_h, label: false %></td>
+      </tr>
+      </tr>
+        <td>8</td>
+        <td align="left">Deliverying Continuous Improvement</td>
+        <td align="center"><%= f.check_box :ind_8_d, label: false %></td>
+        <td align="center"><%= f.check_box :ind_8_e, label: false %></td>
+        <td align="center"><%= f.check_box :ind_8_a, label: false %></td>
+        <td align="center"><%= f.check_box :ind_8_h, label: false %></td>
+      </tr>
+      </tr>
+        <td>9</td>
+        <td align="left">Creating Sustainable Success</td>
+        <td align="center"><%= f.check_box :ind_9_d, label: false %></td>
+        <td align="center"><%= f.check_box :ind_9_e, label: false %></td>
+        <td align="center"><%= f.check_box :ind_9_a, label: false %></td>
+        <td align="center"><%= f.check_box :ind_9_h, label: false %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <%= link_to "Restart", root_path, class: "btn btn-default btn-previous" %>
+  <%= f.button :submit, "Create Wheel", class: "btn btn-lg btn-primary" %>
+
+<% end %>
