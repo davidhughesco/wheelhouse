@@ -1,6 +1,10 @@
 <div class="push"><div>
 
 <div class="footer">
-	All images courtesy of <%= link_to 'Investors in People', 'http://www.investorsinpeople.co.uk/', target: 'blank' %><br>
-	Made by <%= mail_to 'david@skillsaware.com', 'David Hughes' %>
+	Made by <%= mail_to 'hello@davidhughes.co', 'David Hughes' %>
+	<% if controller.controller_name == "wheels" %>
+		<br>All images are the copyright of <%= link_to 'Investors in People', 'http://www.investorsinpeople.co.uk/', target: 'blank' %>
+	<% elsif controller.controller_name == "pages" %>
+		<br>All images are the copyright of <%= link_to 'Investors in People', 'http://www.investorsinpeople.co.uk/', target: 'blank' %>
+	<% end %>
 </div>

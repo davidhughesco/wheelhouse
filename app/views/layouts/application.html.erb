@@ -26,9 +26,13 @@
 	</head>
 	<body>
 
-	<%= yield %>
+		<%= render 'layouts/header' %>
 
-	<%= render 'layouts/footer' %>
+		<%= flash_messages %>
+
+		<%= yield %>
+
+		<%= render 'layouts/footer' %>
 
 	</body>
 </html>
