@@ -28,6 +28,11 @@ td:hover {
   background-color: #f3f3f3;
 }
 
+.fa {
+  padding-right: 5px;
+  color: $brand-primary;
+}
+
 input {
   text-align: center;
 }
@@ -60,6 +65,7 @@ input {
 
 .nav-separator {
   padding: 0 0.5em;
+  color: lightgray;
 }
 
 .step {
