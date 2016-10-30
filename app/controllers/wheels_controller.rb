@@ -16,7 +16,7 @@ class WheelsController < ApplicationController
   # GET /wheels/new
   def new
     @wheel = current_user.wheels.build
-    @wheel.title = "untitled-wheel"
+    @wheel.title = "untitledWheel"
   end
 
   # GET /wheels/1/edit
