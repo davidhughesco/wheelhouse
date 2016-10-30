@@ -17,10 +17,12 @@ class WheelsController < ApplicationController
   def new
     @wheel = current_user.wheels.build
     @wheel.title = "untitledWheel"
+    @submit_wording = "Create Wheel"
   end
 
   # GET /wheels/1/edit
   def edit
+    @submit_wording = "Save Changes"
   end
 
   # POST /wheels
