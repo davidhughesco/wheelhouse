@@ -1,14 +1,9 @@
 <%= simple_form_for(@wheel, html: { class: 'form-horizontal' }) do |f| %>
 
   <% if @wheel.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@wheel.errors.count, "error") %> prohibited this wheel from being saved:</h2>
-
-      <ul>
-      <% @wheel.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <div class="alert alert-danger">
+      <strong>There <%= @wheel.errors.count == 1 ? 'is' : 'are' %> <%= pluralize(@wheel.errors.count, "error") %></strong>.
+      Please review below before clicking <strong>Create Wheel</strong> again.
     </div>
   <% end %>
 
@@ -97,7 +92,18 @@
     </table>
   </div>
 
-  <%= link_to "Restart", root_path, class: "btn btn-default btn-previous" %>
-  <%= f.button :submit, "Create Wheel", class: "btn btn-lg btn-primary" %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <p>Add a <strong>title</strong> in the field below, then click <strong>Create Wheel</strong>.</p>
+      <%= f.input :title, required: true, label: false %>
+      <%= f.button :submit, "Create Wheel", class: "btn btn-lg btn-primary" %>
+    </div>
+  </div>
 
 <% end %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#wheel_title").focus(function() { $(this).select(); } );
+  });
+</script>

@@ -54,6 +54,10 @@ input {
   padding: 1em 0;
 }
 
+.nav-separator {
+  padding: 0 0.5em;
+}
+
 .step {
 	font-size: 2em;
 	margin-bottom: -0.25em;
@@ -93,16 +97,17 @@ input {
 }
 
 .push {
-	height: 100px;
+	height: 60px;
 }
 
 .footer {
+  background-color: #F9F9F9;
 	position: absolute;
 	bottom: 0;
-	height: 100px;
+	height: 60px;
 	text-align: center;
 	width: 100%;
-	color: darkgray;
+  padding-top: 20px;
 }
 
 .footer a {

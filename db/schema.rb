@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161028145053) do
+ActiveRecord::Schema.define(version: 20161030155431) do
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -79,6 +79,10 @@ ActiveRecord::Schema.define(version: 20161028145053) do
     t.boolean  "ind_9_e"
     t.boolean  "ind_9_a"
     t.boolean  "ind_9_h"
+    t.integer  "user_id"
+    t.string   "title"
   end
+
+  add_index "wheels", ["user_id"], name: "index_wheels_on_user_id"
 
 end

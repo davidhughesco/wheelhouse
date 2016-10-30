@@ -1,19 +1,19 @@
 <% content_for :title, " — Download" %>
-<% content_for :description, "Step 3 of 3 — Download the created wheel here." %>
+<% content_for :description, "Step 2 of 2 — Download the Wheel" %>
 
 <div class="container-fluid" style="margin:3em 0 5em 0">
 	<div class="row">
 
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			<div class="step">Step 3 of 3</div>
+			<div class="step">Step 2 of 2</div>
 			<div class="title">Download</div>
-			<p class="para">You can see the wheel you have created below.<br>To edit it, click <strong>Previous</strong>. To download it as an image file, click on <strong>Download</strong>.</p>
+			<p class="para">You can see the wheel ("<strong><%= @wheel.title %></strong>") below.<br>To edit it, click <strong>Previous</strong>. To download it as an image file, click on <strong>Download</strong>.</p>
 			<div class="row">
 				<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
 					<%= render 'wheels/show_wheel' %>
 				</div>
 			</div>
-			<p class="para" style="margin-top:3em">Once downloaded, you should rename the file, adding <strong>.png</strong> or <strong>.jpg</strong> as the extension.<br>For example, you might rename the file to <strong>wheel.png</strong> or <strong>framework.jpg</strong>.</p>
+			<p class="para" style="margin-top:3em">Once downloaded, you should rename the file, adding <strong>.png</strong> or <strong>.jpg</strong> as the extension.<br>For example, you might rename the file to <strong><%= @wheel.title %>.png</strong> or <strong><%= @wheel.title %>.jpg</strong>.</p>
 			<%= link_to "Previous", edit_wheel_path(@wheel), class: "btn btn-default btn-previous" %>
 			<a id="save" class="btn btn-primary btn-lg">Download</a>
 			<%= render 'wheels/scripts' %>

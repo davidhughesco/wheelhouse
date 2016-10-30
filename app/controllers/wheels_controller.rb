@@ -15,7 +15,8 @@ class WheelsController < ApplicationController
 
   # GET /wheels/new
   def new
-    @wheel = Wheel.new
+    @wheel = current_user.wheels.build
+    @wheel.title = "untitled-wheel"
   end
 
   # GET /wheels/1/edit
@@ -25,7 +26,7 @@ class WheelsController < ApplicationController
   # POST /wheels
   # POST /wheels.json
   def create
-    @wheel = Wheel.new(wheel_params)
+    @wheel = current_user.wheels.build(wheel_params)
 
     respond_to do |format|
       if @wheel.save

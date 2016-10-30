@@ -1,6 +1,8 @@
 <% if user_signed_in? %>
   <div class="wheel-nav">
-    Logged in as <%= current_user.email %> &middot;
-    <%= link_to "Log out", destroy_user_session_path, method: :delete %><br>
+    <%= link_to "All Wheels", wheels_path %><span class="nav-separator">/</span>
+    <%= link_to "New Wheel", new_wheel_path %><span class="nav-separator">/</span>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete %><span class="nav-separator">/</span>
+    Logged in as <%= current_user.email %>
   </div>
 <% end %>

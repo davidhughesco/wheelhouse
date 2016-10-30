@@ -5,26 +5,34 @@
   <div class="row">
 
     <div class="col-lg-10 col-lg-offset-1 col-md-12">
-      <div class="step">Archive</div>
+      <div class="step">WheelCreator</div>
       <div class="title">All Wheels</div>
 
       <div class="table-responsive">
         <table class="table table-striped table-bordered">
           <thead>
             <th style="width:5%;text-align:center">ID</th>
-            <th style="width:30%;text-align:center">Created</th>
-            <th style="width:30%;text-align:center">Updated</th>
-            <th style="width:35%;text-align:center">Options</th>
+            <th style="width:25%;text-align:left">Name</th>
+            <th style="width:25%;text-align:left">Created by</th>
+            <th style="width:25%;text-align:left">Created on</th>
+            <th style="width:20%;text-align:center">Options</th>
           </thead>
           <tbody>
             <% @wheels.each do |wheel| %>
               <tr>
                 <td><%= wheel.id %></td>
-                <td><%= wheel.created_at.strftime("%d %B %Y at %H:%M") %></td>
-                <td><%= wheel.updated_at.strftime("%d %B %Y at %H:%M") %></td>
+                <td style="text-align:left">
+                  <%= wheel.title %>
+                </td>
+                <td style="text-align:left">
+                  <%= wheel.user.email %>
+                </td>
+                <td style="text-align:left">
+                  <%= wheel.created_at.strftime("%d %b %Y at %H:%M") %>
+                </td>
                 <td>
-                  <%= link_to 'Show', wheel %> <span class="middot">&middot;</span>
-                  <%= link_to 'Edit', edit_wheel_path(wheel) %> <span class="middot">&middot;</span>
+                  <%= link_to 'View', wheel %><span class="nav-separator">/</span>
+                  <%= link_to 'Edit', edit_wheel_path(wheel) %><span class="nav-separator">/</span>
                   <%= link_to 'Delete', wheel, method: :delete, data: { confirm: 'Are you sure?' } %>
                 </td>
               </tr>
@@ -37,4 +45,3 @@
 
   </div>
 </div>
-
